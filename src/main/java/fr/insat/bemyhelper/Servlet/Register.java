@@ -3,7 +3,6 @@ package fr.insat.bemyhelper.Servlet;
 
 import fr.insat.bemyhelper.DataBase.MySql.Factory;
 import fr.insat.bemyhelper.Model.User;
-import fr.insat.bemyhelper.Model.UserType;
 import fr.insat.bemyhelper.Session;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -12,8 +11,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-
-import static fr.insat.bemyhelper.Model.UserType.*;
 
 @WebServlet(name = "registerServlet", value = "/register")
 public class Register extends HttpServlet {

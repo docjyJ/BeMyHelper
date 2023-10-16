@@ -9,35 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="Initial Commit">
+    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="Add Register">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/DataBase/MySql/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/DataBase/MySql/UsersImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/DataBase/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Model/UserType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Servlet/Disconnect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Servlet/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Servlet/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Servlet/Welcome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Session.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/libs/bootstrap.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/libs/taglibs.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/form/names.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/form/pass.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/form/type.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/form/user.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +76,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/docjyj/IdeaProjects/OKLM",
+    "last_opened_file_path": "/home/docjyj/IdeaProjects/BeMyHelper",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -234,6 +212,7 @@
       <workItem from="1696876054470" duration="7775000" />
       <workItem from="1696933275903" duration="6375000" />
       <workItem from="1696944944052" duration="9000" />
+      <workItem from="1697444052316" duration="743000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -243,15 +222,74 @@
       <option name="project" value="LOCAL" />
       <updated>1696839805297</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="User model">
+      <option name="closed" value="true" />
+      <created>1697444428846</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697444428846</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Database">
+      <option name="closed" value="true" />
+      <created>1697444529397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697444529397</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Login">
+      <option name="closed" value="true" />
+      <created>1697444624109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697444624110</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add Register">
+      <option name="closed" value="true" />
+      <created>1697444670428</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697444670428</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="User model" />
+    <MESSAGE value="Add Database" />
+    <MESSAGE value="Add Login" />
+    <MESSAGE value="Add Register" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Register" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

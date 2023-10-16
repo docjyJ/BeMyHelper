@@ -11,7 +11,7 @@ public class Factory {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-
+            e.printStackTrace();
         }
 
         return new Factory();
