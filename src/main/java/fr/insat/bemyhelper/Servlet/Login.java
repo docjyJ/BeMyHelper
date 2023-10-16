@@ -40,6 +40,5 @@ public class Login extends HttpServlet {
         else
             Session.setSession(request.getSession(), userObj);
         doGet(request, response);
-
     }
 }

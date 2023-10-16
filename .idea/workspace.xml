@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="BeMyHelper:war exploded" />
@@ -9,13 +12,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="Add Register">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="Update Project">
       <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/DataBase/MySql/RequestsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/DataBase/Requests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Model/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Model/RequestState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Servlet/Request/ListRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nav.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/DataBase/MySql/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/DataBase/MySql/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Servlet/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/Servlet/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/welcome.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +36,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Jsp File" />
+        <option value="package-info" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -76,7 +87,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/docjyj/IdeaProjects/BeMyHelper",
+    "last_opened_file_path": "/home/docjyj/IdeaProjects/BeMyHelper/src/main/webapp/WEB-INF/view",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +95,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "configurable.group.language",
     "vue.rearranger.settings.migration": "true"
   },
@@ -94,8 +106,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="fr.insat.bemyhelper.Model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/form" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/userInput" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
@@ -106,6 +122,10 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/header" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.insat.bemyhelper.DataBase.MySql" />
+      <recent name="fr.insat.bemyhelper.Servlet.Request" />
+      <recent name="fr.insat.bemyhelper.Model" />
+      <recent name="fr.insat.bemyhelper.DataBase" />
       <recent name="fr.insat.bemyhelper.Servlet" />
     </key>
   </component>
@@ -212,7 +232,7 @@
       <workItem from="1696876054470" duration="7775000" />
       <workItem from="1696933275903" duration="6375000" />
       <workItem from="1696944944052" duration="9000" />
-      <workItem from="1697444052316" duration="743000" />
+      <workItem from="1697444052316" duration="5441000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -254,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697444670428</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update Project">
+      <option name="closed" value="true" />
+      <created>1697444943434</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697444943434</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +317,8 @@
     <MESSAGE value="Add Database" />
     <MESSAGE value="Add Login" />
     <MESSAGE value="Add Register" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Register" />
+    <MESSAGE value="Update Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

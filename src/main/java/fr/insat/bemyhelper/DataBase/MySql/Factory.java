@@ -1,5 +1,6 @@
 package fr.insat.bemyhelper.DataBase.MySql;
 
+import fr.insat.bemyhelper.DataBase.Requests;
 import fr.insat.bemyhelper.DataBase.Users;
 
 import java.sql.Connection;
@@ -24,5 +25,8 @@ public class Factory {
     // Récupération du Dao
     public Users getUsers() {
         return new UsersImpl(this);
+    }
+    public Requests getRequests() {
+        return new RequestsImpl(this);
     }
 }

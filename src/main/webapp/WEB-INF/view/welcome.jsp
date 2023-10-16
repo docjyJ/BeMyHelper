@@ -6,6 +6,7 @@
     <jsp:include page="/WEB-INF/libs/bootstrap.jsp" />
 </head>
 <body>
+<jsp:include page="/WEB-INF/view/nav.jsp"/>
 <div class="container mt-5">
     <div class="row d-flex justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
