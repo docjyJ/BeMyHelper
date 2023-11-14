@@ -1,9 +1,12 @@
-package fr.insat.bemyhelper.Servlet;
+package fr.insat.bemyhelper.controller.servlet;
 
 
-import fr.insat.bemyhelper.DataBase.MySql.Factory;
-import fr.insat.bemyhelper.Model.User;
-import fr.insat.bemyhelper.Session;
+import fr.insat.bemyhelper.controller.entityManager.BadPasswordException;
+import fr.insat.bemyhelper.controller.entityManager.UserManager;
+import fr.insat.bemyhelper.controller.entityManager.UserNotFoundException;
+import fr.insat.bemyhelper.controller.implementation.Factory;
+import fr.insat.bemyhelper.controller.Session;
+import fr.insat.bemyhelper.model.UserEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -22,17 +25,19 @@ public class Login extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        UserManager um = Factory.createFactory().getUserManager();
         int code = 0;
-        User userObj = null;
+        UserEntity userObj = null;
         String user = request.getParameter("user");
-        if (!Factory.getInstance().getUsers().exist(user))
+        String pass = request.getParameter("pass");
+        try {
+            userObj = um.correctPassword(user, pass);
+        } catch (UserNotFoundException e) {
             code = 1;
-        else {
-            String pass = request.getParameter("pass");
-            userObj = Factory.getInstance().getUsers().correctPassword(user, pass);
-            if (userObj == null)
-                code = 2;
+        } catch (BadPasswordException e) {
+            code = 2;
         }
+
         if (userObj == null){
             request.setAttribute("userFill", user);
             request.setAttribute("errorCode", code);

@@ -1,7 +1,7 @@
-package fr.insat.bemyhelper.Servlet;
+package fr.insat.bemyhelper.controller.servlet;
 
 
-import fr.insat.bemyhelper.Session;
+import fr.insat.bemyhelper.controller.Session;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

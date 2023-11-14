@@ -1,9 +1,11 @@
-package fr.insat.bemyhelper.Servlet;
+package fr.insat.bemyhelper.controller.servlet;
 
 
-import fr.insat.bemyhelper.DataBase.MySql.Factory;
-import fr.insat.bemyhelper.Model.User;
-import fr.insat.bemyhelper.Session;
+import fr.insat.bemyhelper.controller.Session;
+import fr.insat.bemyhelper.controller.entityManager.UserManager;
+import fr.insat.bemyhelper.controller.implementation.Factory;
+import fr.insat.bemyhelper.model.NeederEntity;
+import fr.insat.bemyhelper.model.UserEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -24,19 +26,22 @@ public class Register extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        UserManager um = Factory.createFactory().getUserManager();
         int code = 0;
-        User userObj = null;
+        UserEntity userObj = null;
 
         String user = request.getParameter("user");
         String first = request.getParameter("first");
         String last = request.getParameter("last");
         String type = request.getParameter("type");
-        if (Factory.getInstance().getUsers().exist(user))
+        if (um.exist(user))
             code = 1;
         else try {
-                userObj = new User(first, last, user, type);
-                String pass = request.getParameter("pass");
-                if (Factory.getInstance().getUsers().addNew(userObj, pass) != 1) {
+                userObj = new UserEntity(first, last, user);
+                userObj.setPassword(request.getParameter("pass"));
+                if (type.equals("Needer")) userObj.setNeederByUserName(new NeederEntity(userObj));
+
+                if (um.addNew(userObj) != 1) {
                     userObj = null;
                     code = 2;
                 }

@@ -1,8 +1,8 @@
-package fr.insat.bemyhelper.Servlet;
+package fr.insat.bemyhelper.controller.servlet;
 
 
-import fr.insat.bemyhelper.Model.User;
-import fr.insat.bemyhelper.Session;
+import fr.insat.bemyhelper.controller.Session;
+import fr.insat.bemyhelper.model.UserEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Welcome extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        User s = Session.getSession(request.getSession());
+        UserEntity s = Session.getSession(request.getSession());
         if (s == null)
             response.sendRedirect("login");
         else

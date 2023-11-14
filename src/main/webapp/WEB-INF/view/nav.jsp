@@ -16,10 +16,10 @@
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                 <li class="nav-item dropdown dropdown-menu-right">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        @<c:out value="${ sessionScope.userLogged.user }"/>
+                        @<c:out value="${ sessionScope.userLogged.userName }"/>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><span class="dropdown-item-text"><c:out value="${ sessionScope.userLogged.first } ${ sessionScope.userLogged.last }"/></span></li>
+                        <li><span class="dropdown-item-text"><c:out value="${ sessionScope.userLogged.firstName } ${ sessionScope.userLogged.lastName }"/></span></li>
                         <li><a class="dropdown-item" href="account">Mon compte</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="disconnect">Déconnexion</a></li>

@@ -40,6 +40,34 @@
             </div>
         </div>
     </c:if>
+    <div class="card mb-2">
+        <div class="card-body p-5">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Demandeur</th>
+                        <th scope="col">Statue</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">#</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${ requestScope.requestsList }" var="item" varStatus="status">
+                        <tr>
+                            <td>@<c:out value="${item.requester.user}"/></td>
+                            <td><jsp:include page="/WEB-INF/view/request/stateView.jsp">
+                                <jsp:param name="state" value="${item.state}"/>
+                            </jsp:include></td>
+                            <td><p><c:out value="${item.descrition}"/></p></td>
+                            <th><a class="btn btn-outline-primary" href="request/${item.id}" role="button">Link</a></th>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
