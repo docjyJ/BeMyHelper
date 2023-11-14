@@ -13,19 +13,18 @@ public class UserEntity {
     @Basic
     @Column(name = "LastName", nullable = false)
     private String lastName;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "UserName", nullable = false)
     private String userName;
     @Basic
     @Column(name = "Password", nullable = false)
     private String password;
-    @OneToOne(mappedBy = "userByUserName", cascade = CascadeType.MERGE)
-    private HelperEntity helperByUserName;
-    @OneToOne(mappedBy = "userByUserName", cascade = CascadeType.MERGE)
-    private NeederEntity neederByUserName;
-    @OneToOne(mappedBy = "userByUserName", cascade = CascadeType.MERGE)
-    private ValiderEntity validerByUserName;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private HelperEntity helper;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private NeederEntity needer;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private ValiderEntity valider;
 
     public UserEntity(String firstName, String lastName, String userName) {
         this.firstName = firstName;
@@ -91,27 +90,27 @@ public class UserEntity {
         return result;
     }
 
-    public HelperEntity getHelperByUserName() {
-        return helperByUserName;
+    public HelperEntity getHelper() {
+        return helper;
     }
 
-    public void setHelperByUserName(HelperEntity helperByUserName) {
-        this.helperByUserName = helperByUserName;
+    public void setHelper(HelperEntity helper) {
+        this.helper = helper;
     }
 
-    public NeederEntity getNeederByUserName() {
-        return neederByUserName;
+    public NeederEntity getNeeder() {
+        return needer;
     }
 
-    public void setNeederByUserName(NeederEntity neederByUserName) {
-        this.neederByUserName = neederByUserName;
+    public void setNeeder(NeederEntity needer) {
+        this.needer = needer;
     }
 
-    public ValiderEntity getValiderByUserName() {
-        return validerByUserName;
+    public ValiderEntity getValider() {
+        return valider;
     }
 
-    public void setValiderByUserName(ValiderEntity validerByUserName) {
-        this.validerByUserName = validerByUserName;
+    public void setValider(ValiderEntity valider) {
+        this.valider = valider;
     }
 }

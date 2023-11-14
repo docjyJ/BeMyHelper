@@ -8,5 +8,16 @@
       <jdbc-url>jdbc:mysql://srv-bdens.insa-toulouse.fr:3306/projet_gei_030</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="default/Hibernate" uuid="4d9123fc-13b5-4bf2-a883-8d10a24be98c">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/home/docjyj/IdeaProjects/BeMyHelper/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://srv-bdens.insa-toulouse.fr:3306/projet_gei_030</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

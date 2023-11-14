@@ -16,7 +16,8 @@ class UsersImpl implements UserManager {
     @Override
     public int addNew(UserEntity user) {
         em.getTransaction().begin();
-        em.persist(user);
+        em.merge(user);
+        em.flush();
         em.getTransaction().commit();
         return 1;
     }

@@ -2,16 +2,24 @@ package fr.insat.bemyhelper.model;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "Valider", schema = "projet_gei_030", catalog = "")
 public class ValiderEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "UserName", insertable=false, updatable=false)
     private String userName;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "UserName", referencedColumnName = "UserName", nullable = false)
-    private UserEntity userByUserName;
+    private UserEntity user;
+
+    public ValiderEntity(UserEntity user) {
+            this.user = user;
+            this.userName = user.getUserName();
+        }
+
+    public ValiderEntity() {}
 
     public String getUserName() {
         return userName;
@@ -28,9 +36,7 @@ public class ValiderEntity {
 
         ValiderEntity that = (ValiderEntity) o;
 
-        if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
-
-        return true;
+        return Objects.equals(userName, that.userName);
     }
 
     @Override
@@ -38,11 +44,11 @@ public class ValiderEntity {
         return userName != null ? userName.hashCode() : 0;
     }
 
-    public UserEntity getUserByUserName() {
-        return userByUserName;
+    public UserEntity getUser() {
+        return user;
     }
 
-    public void setUserByUserName(UserEntity userByUserName) {
-        this.userByUserName = userByUserName;
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 }

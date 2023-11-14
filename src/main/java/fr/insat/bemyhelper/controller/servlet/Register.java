@@ -4,8 +4,10 @@ package fr.insat.bemyhelper.controller.servlet;
 import fr.insat.bemyhelper.controller.Session;
 import fr.insat.bemyhelper.controller.entityManager.UserManager;
 import fr.insat.bemyhelper.controller.implementation.Factory;
+import fr.insat.bemyhelper.model.HelperEntity;
 import fr.insat.bemyhelper.model.NeederEntity;
 import fr.insat.bemyhelper.model.UserEntity;
+import fr.insat.bemyhelper.model.ValiderEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -37,11 +39,22 @@ public class Register extends HttpServlet {
         if (um.exist(user))
             code = 1;
         else try {
-                userObj = new UserEntity(first, last, user);
-                userObj.setPassword(request.getParameter("pass"));
-                if (type.equals("Needer")) userObj.setNeederByUserName(new NeederEntity(userObj));
+            userObj = new UserEntity(first, last, user);
+            userObj.setPassword(request.getParameter("pass"));
+            System.out.println(type);
+            switch (type) {
+                case "Needer":
+                    userObj.setNeeder(new NeederEntity(userObj));
+                    break;
+                case "Helper":
+                    userObj.setHelper(new HelperEntity(userObj));
+                    break;
+                case "Valider":
+                    userObj.setValider(new ValiderEntity(userObj));
+                    break;
+            }
 
-                if (um.addNew(userObj) != 1) {
+            if (um.addNew(userObj) != 1) {
                     userObj = null;
                     code = 2;
                 }
