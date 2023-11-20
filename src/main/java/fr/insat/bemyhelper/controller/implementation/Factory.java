@@ -8,13 +8,14 @@ import jakarta.persistence.Persistence;
 
 public class Factory implements ManagerFactory {
     private final EntityManagerFactory emf;
+    private static Factory instance = null;
 
     Factory(EntityManagerFactory emf) {
         this.emf = emf;
     }
-
-    public static ManagerFactory createFactory(){
-        return new Factory(Persistence.createEntityManagerFactory("default"));
+    public static ManagerFactory getInstance(){
+        if(instance == null) instance = new Factory(Persistence.createEntityManagerFactory("default"));
+        return instance;
     }
 
     @Override

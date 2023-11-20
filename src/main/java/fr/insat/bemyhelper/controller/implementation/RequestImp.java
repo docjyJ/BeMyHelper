@@ -13,17 +13,25 @@ class RequestImp implements RequestManager {
         this.em = em;
     }
     @Override
-    public int addNew(NeederEntity user, String description) {
-        return 0;
+    public int addNew(RequestEntity request) {
+        em.getTransaction().begin();
+        em.merge(request);
+        em.flush();
+        em.getTransaction().commit();
+        return 1;
     }
 
     @Override
-    public List<RequestEntity> listFromUser(NeederEntity user) {
-        return null;
+    public List<RequestEntity> listFromUser(NeederEntity needer) {
+        return em.createQuery("FROM RequestEntity r WHERE r.needer = :needer", RequestEntity.class)
+                .setParameter("needer", needer)
+                .getResultList();
     }
 
     @Override
     public List<RequestEntity> listValided() {
-        return null;
+        return em.createQuery("FROM RequestEntity r WHERE r.state = :state", RequestEntity.class)
+                .setParameter("state", 2)
+                .getResultList();
     }
 }

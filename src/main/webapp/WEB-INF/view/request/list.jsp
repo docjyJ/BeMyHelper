@@ -1,3 +1,5 @@
+<%--@elvariable id="userLogged" type="fr.insat.bemyhelper.model.UserEntity"--%>
+<%--@elvariable id="requestsList" type="java.util.List<fr.insat.bemyhelper.model.RequestEntity>"--%>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,7 +22,9 @@
             </div>
         </c:if>
     </c:if>
-    <c:if test="${sessionScope.userLogged.type == 'Needer'}">
+
+
+    <c:if test="${userLogged.ANeeder}">
         <div class="card mb-2">
             <div class="card-body p-5">
                 <h2 class="fw-bold mb-3">Nouvelle demande</h2>
@@ -53,13 +57,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${ requestScope.requestsList }" var="item" varStatus="status">
+                    <c:forEach items="${ requestsList }" var="item" varStatus="status">
                         <tr>
-                            <td>@<c:out value="${item.requester.user}"/></td>
+                            <td>@<c:out value="${item.neederUserName} ${item.needer.user.fullName}"/></td>
                             <td><jsp:include page="/WEB-INF/view/request/stateView.jsp">
                                 <jsp:param name="state" value="${item.state}"/>
                             </jsp:include></td>
-                            <td><p><c:out value="${item.descrition}"/></p></td>
+                            <td><p><c:out value="${item.description}"/></p></td>
                             <th><a class="btn btn-outline-primary" href="request/${item.id}" role="button">Link</a></th>
                         </tr>
                     </c:forEach>

@@ -19,7 +19,7 @@
                         @<c:out value="${ sessionScope.userLogged.userName }"/>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><span class="dropdown-item-text"><c:out value="${ sessionScope.userLogged.firstName } ${ sessionScope.userLogged.lastName }"/></span></li>
+                        <li><span class="dropdown-item-text"><c:out value="${ sessionScope.userLogged.fullName }"/></span></li>
                         <li><a class="dropdown-item" href="account">Mon compte</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="disconnect">Déconnexion</a></li>

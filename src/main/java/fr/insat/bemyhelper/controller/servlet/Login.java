@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserManager um = Factory.createFactory().getUserManager();
+        UserManager um = Factory.getInstance().getUserManager();
         int code = 0;
         UserEntity userObj = null;
         String user = request.getParameter("user");

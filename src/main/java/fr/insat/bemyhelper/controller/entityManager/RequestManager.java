@@ -6,7 +6,7 @@ import fr.insat.bemyhelper.model.RequestEntity;
 import java.util.List;
 
 public interface RequestManager {
-    int addNew(NeederEntity user, String description);
+    int addNew(RequestEntity request);
 
     List<RequestEntity> listFromUser(NeederEntity user);
 

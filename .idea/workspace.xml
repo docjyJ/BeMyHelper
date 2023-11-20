@@ -12,16 +12,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="le commit de la depression">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="le commit de l'espoir en ft">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Request/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/UsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/UsersImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/RequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/RequestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/RequestImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/RequestImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/HelperEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/HelperEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/NeederEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/NeederEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Request/ListRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Request/ListRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/RequestEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/RequestEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/ValiderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/ValiderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/stateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/stateView.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +37,10 @@
       <list>
         <option value="Interface" />
         <option value="package-info" />
-        <option value="Enum" />
         <option value="Jsp File" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -128,11 +132,11 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.insat.bemyhelper.controller.servlet.Request" />
       <recent name="fr.insat.bemyhelper.controller.entityManager" />
       <recent name="fr.insat.bemyhelper.DataBase.MySql" />
       <recent name="fr.insat.bemyhelper.Servlet.Request" />
       <recent name="fr.insat.bemyhelper.Model" />
-      <recent name="fr.insat.bemyhelper.DataBase" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="fr.insat.bemyhelper.model" />
@@ -252,7 +256,8 @@
       <workItem from="1698243455024" duration="18000" />
       <workItem from="1699967093473" duration="763000" />
       <workItem from="1699967872866" duration="142000" />
-      <workItem from="1699968030270" duration="3134000" />
+      <workItem from="1699968030270" duration="3569000" />
+      <workItem from="1700042301677" duration="4638000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -318,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699967168952</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="le commit de l'espoir en ft">
+      <option name="closed" value="true" />
+      <created>1699971562050</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699971562050</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +369,8 @@
     <MESSAGE value="Update Project" />
     <MESSAGE value="Add NewDemand functionality" />
     <MESSAGE value="le commit de la depression" />
-    <option name="LAST_COMMIT_MESSAGE" value="le commit de la depression" />
+    <MESSAGE value="le commit de l'espoir en ft" />
+    <option name="LAST_COMMIT_MESSAGE" value="le commit de l'espoir en ft" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

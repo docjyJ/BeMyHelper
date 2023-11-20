@@ -90,12 +90,20 @@ public class UserEntity {
         return result;
     }
 
+    public boolean isAHelper() {
+        return helper != null;
+    }
+
     public HelperEntity getHelper() {
         return helper;
     }
 
     public void setHelper(HelperEntity helper) {
         this.helper = helper;
+    }
+
+    public boolean isANeeder() {
+        return needer != null;
     }
 
     public NeederEntity getNeeder() {
@@ -106,11 +114,19 @@ public class UserEntity {
         this.needer = needer;
     }
 
+    public boolean isAValider(){
+        return valider!= null;
+    }
+
     public ValiderEntity getValider() {
         return valider;
     }
 
     public void setValider(ValiderEntity valider) {
         this.valider = valider;
+    }
+
+    public String getFullName() {
+        return firstName + " " + lastName;
     }
 }

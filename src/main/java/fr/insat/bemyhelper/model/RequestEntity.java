@@ -2,25 +2,35 @@ package fr.insat.bemyhelper.model;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "Request", schema = "projet_gei_030", catalog = "")
 public class RequestEntity {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "ID")
+    private int id;
     @Basic
     @Column(name = "NeederUserName", insertable=false, updatable=false)
     private String neederUserName;
     @Basic
     @Column(name = "Description")
     private String description;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    @Column(name = "ID")
-    private int id;
     @Basic
     @Column(name = "State")
     private int state;
     @ManyToOne
     @JoinColumn(name = "NeederUserName", referencedColumnName = "UserName")
-    private NeederEntity neederByNeederUserName;
+    private NeederEntity needer;
+
+    public RequestEntity() {}
+
+    public RequestEntity(String description, NeederEntity needer) {
+        this.description = description;
+        this.needer = needer;
+        this.neederUserName = needer.getUserName();
+    }
 
     public String getNeederUserName() {
         return neederUserName;
@@ -63,10 +73,8 @@ public class RequestEntity {
 
         if (id != that.id) return false;
         if (state != that.state) return false;
-        if (neederUserName != null ? !neederUserName.equals(that.neederUserName) : that.neederUserName != null)
-            return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-
+        if (!Objects.equals(neederUserName, that.neederUserName))return false;
+        if (!Objects.equals(description, that.description)) return false;
         return true;
     }
 
@@ -79,11 +87,11 @@ public class RequestEntity {
         return result;
     }
 
-    public NeederEntity getNeederByNeederUserName() {
-        return neederByNeederUserName;
+    public NeederEntity getNeeder() {
+        return needer;
     }
 
-    public void setNeederByNeederUserName(NeederEntity neederByNeederUserName) {
-        this.neederByNeederUserName = neederByNeederUserName;
+    public void setNeeder(NeederEntity needer) {
+        this.needer = needer;
     }
 }
