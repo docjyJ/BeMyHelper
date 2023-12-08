@@ -76,9 +76,7 @@ public class UserEntity {
         if (!Objects.equals(firstName, that.firstName)) return false;
         if (!Objects.equals(lastName, that.lastName)) return false;
         if (!Objects.equals(userName, that.userName)) return false;
-        if (!Objects.equals(password, that.password)) return false;
-
-        return true;
+        return Objects.equals(password, that.password);
     }
 
     @Override

@@ -12,20 +12,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="le commit de l'espoir en ft">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Request/Request.java" afterDir="false" />
+    <list default="true" id="65100b45-17b1-40b8-9122-3639014d59b0" name="Changes" comment="c'est pas vraiment un sprint fini mais tkt">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/request/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/id.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/RequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/RequestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/entityManager/UserManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/RequestImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/RequestImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/UsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/implementation/UsersImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Disconnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Disconnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Request/ListRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Request/ListRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Request/ListRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/request/ListRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/controller/servlet/Welcome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/HelperEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/HelperEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/NeederEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/NeederEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/RequestEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/RequestEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/ValiderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/insat/bemyhelper/model/ValiderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/libs/taglibs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/libs/tag-libs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/stateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request/stateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +103,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/docjyj/IdeaProjects/BeMyHelper/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/docjyj/IdeaProjects/BeMyHelper/src/main/webapp/WEB-INF/view/request&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -117,9 +130,9 @@
       <recent name="fr.insat.bemyhelper.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/request" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/form" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/userInput" />
     </key>
@@ -149,7 +162,7 @@
       <deployment>
         <artifact name="BeMyHelper:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/BeMyHelper_war_exploded" />
+            <option name="CONTEXT_PATH" value="/test" />
           </settings>
         </artifact>
       </deployment>
@@ -258,6 +271,9 @@
       <workItem from="1699967872866" duration="142000" />
       <workItem from="1699968030270" duration="3569000" />
       <workItem from="1700042301677" duration="4638000" />
+      <workItem from="1700469118445" duration="4644000" />
+      <workItem from="1700729704528" duration="3000" />
+      <workItem from="1702024132640" duration="3307000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -331,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699971562050</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="c'est pas vraiment un sprint fini mais tkt">
+      <option name="closed" value="true" />
+      <created>1700469495632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700469495632</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +394,8 @@
     <MESSAGE value="Add NewDemand functionality" />
     <MESSAGE value="le commit de la depression" />
     <MESSAGE value="le commit de l'espoir en ft" />
-    <option name="LAST_COMMIT_MESSAGE" value="le commit de l'espoir en ft" />
+    <MESSAGE value="c'est pas vraiment un sprint fini mais tkt" />
+    <option name="LAST_COMMIT_MESSAGE" value="c'est pas vraiment un sprint fini mais tkt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

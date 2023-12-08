@@ -19,7 +19,7 @@ import java.io.IOException;
 public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (Session.getSession(request.getSession()) != null)
-            response.sendRedirect("welcome");
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/welcome"));
         else
             this.getServletContext().getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
     }

@@ -14,7 +14,6 @@
                 <div class="card-body p-5">
                     <h2 class="fw-bold mb-3">BeMyHelper</h2>
                     <p class="mb-4">Vous êtes ${ sessionScope.userLogged.firstName } ${ sessionScope.userLogged.lastName } !</p>
-                    <p class="mb-4"><a href="disconnect" class="text-primary fw-bold">Déconnexion</a></p>
                 </div>
             </div>
         </div>

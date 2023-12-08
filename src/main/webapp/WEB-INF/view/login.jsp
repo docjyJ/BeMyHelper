@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <c:url value="/register" var="register"/>
     <meta charset="UTF-8">
     <title>Connexion</title>
     <jsp:include page="/WEB-INF/libs/bootstrap.jsp" />
@@ -23,18 +24,16 @@
                         </div>
                     </form>
                     <div>
-                        <p class="mb-0  text-center">Vous n'avez pas de compte ?<br><a href="register"
-                                                                                       class="text-primary fw-bold">Créez-vous
-                            un compte !</a></p>
+                        <p class="mb-0  text-center">Vous n'avez pas de compte ?<br/>
+                            <a href="${register}" class="text-primary fw-bold">Créez-vous un compte !</a></p>
                     </div>
                 </div>
             </div>
             <c:if test="${ !empty requestScope.errorCode && requestScope.errorCode != 0 }">
                 <div class="alert alert-danger" role="alert">
                     <c:if test="${ requestScope.errorCode == 1 }">
-                        <c:out value="L'utilisateur '${ requestScope.userFill }' n'existe pas."/><br/><a href="register"
-                                                                                                         class="text-primary fw-bold">Créez-vous
-                        un compte !</a>
+                        <c:out value="L'utilisateur '${ requestScope.userFill }' n'existe pas."/><br/>
+                        <a href="${register}" class="text-primary fw-bold">Créez-vous un compte !</a>
                     </c:if>
                     <c:if test="${ requestScope.errorCode == 2 }">
                         Mots de passe incorrect.

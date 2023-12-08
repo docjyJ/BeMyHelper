@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Valider", schema = "projet_gei_030", catalog = "")
+@Table(name = "Valider", schema = "projet_gei_030")
 public class ValiderEntity {
     @Id
     @Column(name = "UserName", insertable=false, updatable=false)

@@ -14,12 +14,11 @@ class UsersImpl implements UserManager {
 
 
     @Override
-    public int addNew(UserEntity user) {
+    public void addNew(UserEntity user) {
         em.getTransaction().begin();
         em.merge(user);
         em.flush();
         em.getTransaction().commit();
-        return 1;
     }
 
     @Override

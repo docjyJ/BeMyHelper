@@ -17,7 +17,7 @@ public class Welcome extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserEntity s = Session.getSession(request.getSession());
         if (s == null)
-            response.sendRedirect("login");
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/login"));
         else
             this.getServletContext().getRequestDispatcher("/WEB-INF/view/welcome.jsp").forward(request, response);
     }

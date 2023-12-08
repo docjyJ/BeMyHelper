@@ -21,7 +21,7 @@ public class Register extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (Session.getSession(request.getSession()) != null)
-            response.sendRedirect("welcome");
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/welcome"));
         else
             this.getServletContext().getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
 
@@ -53,14 +53,11 @@ public class Register extends HttpServlet {
                     userObj.setValider(new ValiderEntity(userObj));
                     break;
             }
-
-            if (um.addNew(userObj) != 1) {
-                    userObj = null;
-                    code = 2;
-                }
-            } catch (IllegalArgumentException e) {
-                code = 3;
-            }
+            um.addNew(userObj);
+        } catch (Exception e) {
+            code = 2;
+            userObj = null;
+        }
 
         if (userObj == null) {
             request.setAttribute("userFill", user);
@@ -68,8 +65,7 @@ public class Register extends HttpServlet {
             request.setAttribute("lastFill", last);
             request.setAttribute("typeFill", type);
             request.setAttribute("errorCode", code);
-        }
-        else
+        } else
             Session.setSession(request.getSession(), userObj);
         doGet(request, response);
 

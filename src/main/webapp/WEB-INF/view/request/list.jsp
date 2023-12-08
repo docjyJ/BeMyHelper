@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <c:url value="/request" var="request"/>
     <meta charset="UTF-8">
     <title>Connexion</title>
     <jsp:include page="/WEB-INF/libs/bootstrap.jsp"/>
@@ -64,7 +65,7 @@
                                 <jsp:param name="state" value="${item.state}"/>
                             </jsp:include></td>
                             <td><p><c:out value="${item.description}"/></p></td>
-                            <th><a class="btn btn-outline-primary" href="request/${item.id}" role="button">Link</a></th>
+                            <th><a class="btn btn-outline-primary" href="${request}/${item.id}" role="button">Link</a></th>
                         </tr>
                     </c:forEach>
                     </tbody>

@@ -13,6 +13,6 @@ import java.io.IOException;
 public class Disconnect extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Session.removeSession(request.getSession());
-        response.sendRedirect("login");
+        response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/login"));
     }
 }

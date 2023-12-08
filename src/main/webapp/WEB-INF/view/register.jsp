@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <c:url value="/login" var="login"/>
     <meta charset="UTF-8">
     <title>Inscription</title>
     <jsp:include page="/WEB-INF/libs/bootstrap.jsp"/>
@@ -30,24 +31,21 @@
                         </div>
                     </form>
                     <div>
-                        <p class="mb-0  text-center">Vous avez déjà un compte ?<br><a href="login"
-                                                                                      class="text-primary fw-bold">Connectez-vous
-                            !</a></p>
+                        <p class="mb-0  text-center">
+                            Vous avez déjà un compte ?<br/>
+                            <a href="${login}" class="text-primary fw-bold">Connectez-vous !</a>
+                        </p>
                     </div>
                 </div>
             </div>
             <c:if test="${ !empty requestScope.errorCode && requestScope.errorCode != 0 }">
                 <div class="alert alert-danger" role="alert">
                     <c:if test="${ requestScope.errorCode == 1 }">
-                        <c:out value="L'utilisateur '${ requestScope.userFill }' existe déjà."/><br/><a href="register"
-                                                                                                        class="text-primary fw-bold">Connectez-vous
-                        !</a>
+                        <c:out value="L'utilisateur '${ requestScope.userFill }' existe déjà."/><br/>
+                        <a href="${login}" class="text-primary fw-bold">Connectez-vous !</a>
                     </c:if>
                     <c:if test="${ requestScope.errorCode == 2 }">
                         Erreur durant la création du compte.
-                    </c:if>
-                    <c:if test="${ requestScope.errorCode == 3 }">
-                        Les champ comporte des caractères interdits.
                     </c:if>
                 </div>
             </c:if>

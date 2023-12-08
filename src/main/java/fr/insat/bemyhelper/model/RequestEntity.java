@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Request", schema = "projet_gei_030", catalog = "")
+@Table(name = "Request", schema = "projet_gei_030")
 public class RequestEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -15,6 +15,9 @@ public class RequestEntity {
     @Column(name = "NeederUserName", insertable=false, updatable=false)
     private String neederUserName;
     @Basic
+    @Column(name = "HelperUserName", insertable=false, updatable=false)
+    private String helperUserName;
+    @Basic
     @Column(name = "Description")
     private String description;
     @Basic
@@ -23,6 +26,9 @@ public class RequestEntity {
     @ManyToOne
     @JoinColumn(name = "NeederUserName", referencedColumnName = "UserName")
     private NeederEntity needer;
+    @ManyToOne
+    @JoinColumn(name = "HelperUserName", referencedColumnName = "UserName")
+    private HelperEntity helper;
 
     public RequestEntity() {}
 
@@ -40,6 +46,13 @@ public class RequestEntity {
         this.neederUserName = neederUserName;
     }
 
+    public String getHelperUserName() {
+        return helperUserName;
+    }
+
+    public void setHelperUserName(String helperUserName) {
+        this.helperUserName = helperUserName;
+    }
     public String getDescription() {
         return description;
     }
@@ -74,8 +87,8 @@ public class RequestEntity {
         if (id != that.id) return false;
         if (state != that.state) return false;
         if (!Objects.equals(neederUserName, that.neederUserName))return false;
-        if (!Objects.equals(description, that.description)) return false;
-        return true;
+        if (!Objects.equals(helperUserName, that.helperUserName))return false;
+        return Objects.equals(description, that.description);
     }
 
     @Override
@@ -93,5 +106,14 @@ public class RequestEntity {
 
     public void setNeeder(NeederEntity needer) {
         this.needer = needer;
+    }
+
+
+    public HelperEntity getHelper() {
+        return helper;
+    }
+
+    public void setHelper(HelperEntity helper) {
+        this.helper = helper;
     }
 }
