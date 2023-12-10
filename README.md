@@ -1,9 +1,9 @@
-# Lancé BeMyHelper
+# Lancer BeMyHelper
 
-Cette aplication nécésite un serveur suportant les servlet.
+Cette application nécessite un serveur supportant les servlets.
 
-## lancé l'apli
-Compilé et récupérer le .war :
+## Lancer l'application
+Compiler et récupérer le .war :
 
 
 ```sh
@@ -11,7 +11,7 @@ mvn clean install
 ```
 
 
-Plus qu'à le déployé sur glassfish ou tomcat par exemple.
+Plus qu'à le déployer sur glassfish ou tomcat par exemple.
 
 
 [![UN POISSON](https://upload.wikimedia.org/wikipedia/fr/7/71/Glassfish_logo_large.png)](https://projects.eclipse.org/projects/ee4j.glassfish)
