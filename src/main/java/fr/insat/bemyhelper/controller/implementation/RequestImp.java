@@ -23,6 +23,7 @@ class RequestImp implements RequestManager {
 
     @Override
     public List<RequestEntity> listFromUser(NeederEntity needer) {
+
         return em.createQuery("FROM RequestEntity r WHERE r.needer = :needer", RequestEntity.class)
                 .setParameter("needer", needer)
                 .getResultList();
